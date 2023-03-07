@@ -1,0 +1,18 @@
+file_read = open('acme_customers_updated.csv','r')
+
+state_data = {}
+
+for line in file_read:
+    if 'first_name' in line:
+        continue
+
+    line_list = line.strip().split(',')
+    state = line_list[6]
+    
+
+    if state not in state_data:
+        state_data[state]
+    else:
+        state_data[state].add
+
+print(state_data)
